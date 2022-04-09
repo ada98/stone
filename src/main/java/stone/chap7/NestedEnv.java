@@ -31,9 +31,8 @@ public class NestedEnv implements Environment {
         Environment e = where(name);
         if (e == null) {
             e = this;
-        } else {
-            ((FuncEvaluator.EnvEx) e).putNew(name, value);
         }
+        ((FuncEvaluator.EnvEx) e).putNew(name, value);
     }
 
     @Override
