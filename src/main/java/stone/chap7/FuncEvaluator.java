@@ -46,9 +46,9 @@ public class FuncEvaluator {
     }
 
     @Reviser
-    public static class primaryEx extends PrimaryExpr {
+    public static class PrimaryEx extends PrimaryExpr {
 
-        public primaryEx(List<ASTree> c) {
+        public PrimaryEx(List<ASTree> c) {
             super(c);
         }
 
