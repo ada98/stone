@@ -48,7 +48,7 @@ public class EnvOptimizer {
     }
 
     @Reviser
-    public static abstract class ASTListEx extends ASTList {
+    public static class ASTListEx extends ASTList {
         public ASTListEx(List<ASTree> list) {
             super(list);
         }
