@@ -129,7 +129,7 @@ public class EnvOptimizer {
     @Reviser
     public static class NameEx extends Name {
         protected static final int UNKONWN = -1;
-        private int nest, index;
+        protected int nest, index;
 
         public NameEx(Token t) {
             super(t);
