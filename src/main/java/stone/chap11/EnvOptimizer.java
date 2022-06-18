@@ -188,6 +188,17 @@ public class EnvOptimizer {
             ((ASTreeOptEx) left).lookup(syms);
             ((ASTreeOptEx) right()).lookup(syms);
         }
+
+        @Override
+        protected Object computeAssign(Environment env, Object rvalue) {
+            ASTree l = left();
+            if (l instanceof Name) {
+                ((NameEx)l).evalForAssign(env, rvalue);
+                return rvalue;
+            }
+            else
+                return super.computeAssign(env, rvalue);
+        }
     }
 
 

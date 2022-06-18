@@ -170,7 +170,7 @@ public class ObjOptimizer {
         public void evalForAssign(Environment env, Object value) {
             if (index == UNKONWN) {
                 env.put(name(), value);
-            } else if (index == MemberSymbols.FIELD) {
+            } else if (nest == MemberSymbols.FIELD) {
                 getThis(env).write(index, value);
             } else if (nest == MemberSymbols.METHOD) {
                 throw new StoneException("cannot update a method:" + name(), this);
